@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = EnvLoader::VERSION
   spec.authors       = ["Endri Gjiri"]
   spec.email         = ["egjiri@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Reads a YAML file and creates ENV variables from it}
+  spec.summary       = %q{Reads a YAML file and creates ENV variables from it}
   spec.homepage      = ""
   spec.license       = "MIT"
 
