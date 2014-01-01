@@ -3,7 +3,7 @@ require 'yaml'
 
 module EnvLoader
 
-  def self.read(env_yml_file)
+  def self.read(env_yml_file = File.join('config', 'env_variables.yml'))
     if File.exists? env_yml_file
       if hash = YAML.load(File.open env_yml_file)
         hash.each do |key, value|
