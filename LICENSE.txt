@@ -1,4 +1,4 @@
-Copyright (c) 2013 Endri Gjiri
+Copyright (c) 2015 Endri Gjiri
 
 MIT License
 
