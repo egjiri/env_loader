@@ -1,0 +1,14 @@
+# The specific apps should try to find part of the subtree and use that for their config
+# If they can not find a match they should then just load the "default" subtree
+
+# Environment specific configs
+first-app:
+  default: &default
+    service_database_url: 'first-secret'
+  name-reaction:
+    <<: *default
+second-app:
+  default: &default
+    service_database_url: 'second-secret'
+  name-reaction:
+    <<: *default
