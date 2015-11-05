@@ -2,7 +2,7 @@
 
 By: Endri Gjiri *www.name-reaction.com*
 
-**EnvLoader** is a utility module with a single `read` method which can read a .yml file and store its data in environment variables. This is useful when dealing with sensitive data that should not be directly entered in the code and stored in version control. Passwords and other information can now simply be stored in a yaml file which is added to .gitignore and then can be accessed through the env_loader gem via ENV variables
+**EnvLoader** is a utility module with methods to load a .yml file and store its data in environment variables. This is useful when dealing with sensitive data that should not be directly entered in the code and stored in version control. Passwords and other information can now simply be stored in a yaml file which should be added to .gitignore and then can be accessed through the env_loader gem via ENV variables
 
 ## Installation
 
@@ -19,16 +19,29 @@ Or install it yourself as:
     $ gem install env_loader
 
 ## Usage
+##### TODO: Better Document this section
+* `EnvLoader.setup_monolith`
+* `EnvLoader.setup_microservice`
+
+---
+
+## DEPRECATED Usage
 
 1. Include the env_loader gem directly or through bundler
 ```ruby
 require 'env_loader'
 ```
 
-2. Create a .yml file with all the desired information. For example create a file called credentials.yml with the following content:
+2. Create a .yml file with all the desired information. For example:
 ```yml
-username: endri
-password: secret
+default: &default
+     username: 'endri'
+development:
+     <<: *default
+     password: 'password'
+production:
+     <<: *default
+     password: 'secret'
 ```
 
 3. Read the .yml file through the env_loader gem as follows:
@@ -42,7 +55,7 @@ ENV['USERNAME'] # => "endri"
 ENV['PASSWORD'] # => "secret"
 ```
 
-## Usage with Rails
+## DEPRECATED Usage with Rails
 
 1. Add the env_loader gem to the Gemfile and run `Bundle install`
 
