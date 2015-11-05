@@ -42,7 +42,7 @@ module EnvLoader
     def extract_subhash_from_hash_and_keys(hash, subhash_keys)
       key = subhash_keys.shift
       return unless key
-      return hash[:default] || {} unless hash.key?(key)
+      return hash['default'] || {} unless hash.key?(key)
       return hash[key] if subhash_keys.empty?
       extract_subhash_from_hash_and_keys(hash[key], subhash_keys)
     end

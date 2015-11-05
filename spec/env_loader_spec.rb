@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'uiux'
 
 describe EnvLoader do
   it 'has a version number' do
