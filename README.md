@@ -1,4 +1,4 @@
-# EnvLoader
+# EnvLoader [![Build Status](https://travis-ci.org/egjiri/env_loader.svg)](https://travis-ci.org/egjiri/env_loader)
 
 By: Endri Gjiri *www.name-reaction.com*
 
