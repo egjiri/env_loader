@@ -1,3 +1,4 @@
+require 'env_loader/railtie' if defined?(Rails)
 require 'env_loader/version'
 require 'env_loader/configurator'
 require 'uiux'

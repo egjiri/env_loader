@@ -20,8 +20,9 @@ Or install it yourself as:
 
 ## Usage
 ##### TODO: Better Document this section
-* `EnvLoader.setup_monolith`
-* `EnvLoader.setup_microservice`
+* `> EnvLoader.setup_monolith`
+* `> EnvLoader.setup_microservice`
+* `$ rake env_loader:set_heroku_configs[heroku_app,config_file,config_subtree_key]`
 
 ---
 
