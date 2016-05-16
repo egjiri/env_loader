@@ -15,7 +15,7 @@ namespace :env_loader do
       ).config
 
       UI.heading 'Current Heroku configs:'
-      result = UI.execute "heroku config -a #{args[:heroku_app]}"
+      result = UI.execute_and_register "heroku config -a #{args[:heroku_app]}"
       heroku_config_hash = {}
       result.split("\n").each do |row|
         parsed_row = YAML.load(row)
